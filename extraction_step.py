@@ -11,31 +11,27 @@ headers = {
 
 conn.request("GET", "/players/topscorers?season=2021&league=61", headers=headers)
 
-res = conn.getresponse()
-data = res.read()
+top_scorers_res = conn.getresponse()
+top_scorers_data = top_scorers_res.read()
 
-json_data = data.decode("utf-8")
+# Parse JSON data correctly
+top_scorers_json = json.loads(top_scorers_data.decode("utf-8"))
 
-# Serializing json
-json_object = json.dumps(json_data)
-
-# Writing to sample.json
-with open("top_scorers.json", "w") as outfile:
-    outfile.write(json_object)
+# Write formatted JSON to file
+with open("top_scorers.json", "w", encoding='utf-8') as outfile:
+    json.dump(top_scorers_json, outfile, indent=2, ensure_ascii=False)
 
 ################################################# TOP ASSISTS ############################################################
 conn.request("GET", "/players/topassists?season=2021&league=61", headers=headers)
-res = conn.getresponse()
-data = res.read()
 
-json_data2 = data.decode("utf-8")
+top_assists_res = conn.getresponse()
+top_assists_data = top_assists_res.read()
 
-# Serializing json
-json_object2 = json.dumps(json_data2)
+# Parse JSON data correctly
+top_assists_json = json.loads(top_assists_data.decode("utf-8"))
 
-# Writing to sample.json
-with open("top_assists.json", "w") as outfile:
-    outfile.write(json_object2)
-
+# Write formatted JSON to file
+with open("top_assists.json", "w", encoding='utf-8') as outfile:
+    json.dump(top_assists_json, outfile, indent=2, ensure_ascii=False)
 
 
