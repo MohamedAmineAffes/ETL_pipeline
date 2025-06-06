@@ -1,23 +1,16 @@
+from pymongo import MongoClient
 import json
 
-# Read 2 jons files
-# Opening JSON file
-file_assists = open('top_assists.json')
+# Connect to MongoDB running locally
+client = MongoClient("mongodb://localhost:27017/")
 
-# returns JSON object as a dictionary
-data_assists = json.load(file_assists)
+db = client["football_db"]
+collection = db["my_collection"]
+print("connected to DB with success")
 
-# Print the data
-print(data_assists)
+########                   add new filed for the contribution                         #########
 
-# Opening JSON file
-file_scorers= open('top_scorers.json')
 
-# returns JSON object as a dictionary
-data_scorers= json.load(file_scorers)
 
-# Print the data
-print(data_scorers)
 
-#Create new field "contribution"
 
