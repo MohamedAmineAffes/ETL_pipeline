@@ -53,6 +53,15 @@
       <option name="presentableId" value="Default" />
       <updated>1749074691147</updated>
     </task>
+    <task id="LOCAL-00001" summary="Revert &quot;added readme&quot;&#10;&#10;This reverts commit 591a3d97d9e261ee3ff59ce66600c0ea75cc8b76.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1749580522935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749580522935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
